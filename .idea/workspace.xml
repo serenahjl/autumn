@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="abbc16e5-ced1-42fb-b7b4-3e7b5b471731" name="Default Changelist" comment="" />
+    <list default="true" id="abbc16e5-ced1-42fb-b7b4-3e7b5b471731" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/promise-autumn-pre/compusher/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/promise-autumn-pre/compusher/__init__.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +49,7 @@
           <entry key="gitnore" value="1" />
           <entry key="ini" value="4" />
           <entry key="md" value="1" />
-          <entry key="py" value="22" />
+          <entry key="py" value="23" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -56,7 +58,7 @@
           <entry key="Ini" value="5" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="7" />
-          <entry key="Python" value="22" />
+          <entry key="Python" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -84,7 +86,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/promise-autumn-pre/env/pip.conf">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="40">
@@ -111,10 +113,19 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/promise-autumn-pre/compusher/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/promise-autumn-pre/scripts/manager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
+            <state relative-caret-position="940">
               <caret line="47" column="16" lean-forward="true" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
             </state>
           </provider>
@@ -123,8 +134,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/promise-autumn-pre/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1960">
-              <caret line="98" column="3" lean-forward="true" selection-start-line="98" selection-start-column="3" selection-end-line="98" selection-end-column="3" />
+            <state relative-caret-position="198">
+              <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
               <folding>
                 <element signature="e#328#337#0" expanded="true" />
               </folding>
@@ -151,18 +162,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
               <caret line="9" column="8" selection-start-line="9" selection-end-line="9" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/promise-autumn-pre/compusher/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="437" selection-start-line="437" selection-end-line="437" />
-              <folding>
-                <element signature="e#150#176#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -195,6 +194,9 @@
       <find>Software</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -207,7 +209,6 @@
         <option value="$PROJECT_DIR$/promise-autumn-pre/tox.ini" />
         <option value="$PROJECT_DIR$/promise-autumn-pre/pip.conf" />
         <option value="$PROJECT_DIR$/promise-autumn-pre/compusher/exception.py" />
-        <option value="$PROJECT_DIR$/promise-autumn-pre/compusher/__init__.py" />
         <option value="$PROJECT_DIR$/promise-autumn-pre/compusher/utils.py" />
         <option value="$PROJECT_DIR$/promise-autumn-pre/compusher/resource.py" />
         <option value="$PROJECT_DIR$/promise-autumn-pre/compusher/models.py" />
@@ -218,6 +219,7 @@
         <option value="$PROJECT_DIR$/promise-autumn-pre/env/ansible.cfg" />
         <option value="$PROJECT_DIR$/promise-autumn-pre/scripts/manager.py" />
         <option value="$PROJECT_DIR$/promise-autumn-pre/env/pip.conf" />
+        <option value="$PROJECT_DIR$/promise-autumn-pre/compusher/__init__.py" />
       </list>
     </option>
   </component>
@@ -227,12 +229,13 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="133" />
     <option name="y" value="52" />
     <option name="width" value="1026" />
     <option name="height" value="546" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -404,7 +407,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32843137" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32843137" />
       <window_info anchor="bottom" id="Terminal" order="11" />
@@ -457,16 +460,6 @@
           <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/promise-autumn-pre/compusher/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="71" column="26" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
-          <folding>
-            <element signature="e#47#85#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -532,23 +525,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/promise-autumn-pre/scripts/manager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="47" column="16" lean-forward="true" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/promise-autumn-pre/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1960">
-          <caret line="98" column="3" lean-forward="true" selection-start-line="98" selection-start-column="3" selection-end-line="98" selection-end-column="3" />
-          <folding>
-            <element signature="e#328#337#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/promise-autumn-pre/pip.conf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -567,6 +543,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
           <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/promise-autumn-pre/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+          <folding>
+            <element signature="e#328#337#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/promise-autumn-pre/scripts/manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="940">
+          <caret line="47" column="16" lean-forward="true" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/promise-autumn-pre/compusher/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>

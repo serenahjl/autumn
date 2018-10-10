@@ -46,15 +46,18 @@ def responseJson(data, code, headers=None):
 # initialize db
 db = SQLAlchemy(app)
 
-# initialize logger
-handler = RotatingFileHandler(
-    app.config['LOGFILE'], maxBytes=102400, backupCount=1)
-handler.setFormatter(Formatter(
+
+# initialize the logging handler
+log_handler = RotatingFileHandler(app.config['LOGGER_FILE'],
+                                  maxBytes=102400,
+                                  backupCount=1)
+log_handler.setFormatter(Formatter(
     '%(asctime)s %(levelname)s: %(message)s '
     '[in %(pathname)s:%(lineno)d]'
 ))
-handler.setLevel(app.config['LOGLEVEL'])
-app.logger.addHandler(handler)
+log_handler.setLevel(app.config['DEFAULT_LOGLEVEL'])
+
+app.logger.addHandler(log_handler)
 
 # initialize cors
 cors = CORS(app, allow_headers='*', expose_headers='Content-Disposition')

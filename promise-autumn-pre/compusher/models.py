@@ -11,7 +11,7 @@ from . import db, app
 from . import utils
 from . import exception
 #from ..user.models import User, Role
-from bulter.user.models import User,Role
+from butler import user
 from explorer.explorer import ExplorerInf
 from sqlalchemy import and_, or_
 from sqlalchemy.dialects.mysql import TEXT, LONGTEXT

@@ -23,12 +23,12 @@ import json
 import re
 import os
 from celery.exceptions import SoftTimeLimitExceeded
-from promise.eater.interfaces import toWalkerGetPass, toWalkerAddSoftware, toWalkerGetHost
-from promise.eater.interfaces import toWalkerGetGroup, toWalkerGetResponsible, toWalkerGetEnv
-from promise.eater.interfaces import toWalkerCheckTemplate, toWalkerGetOwner, toWalkerGetPassAndIP
+#from promise.eater.interfaces import toWalkerGetPass, toWalkerAddSoftware, toWalkerGetHost
+#from promise.eater.interfaces import toWalkerGetGroup, toWalkerGetResponsible, toWalkerGetEnv
+#from promise.eater.interfaces import toWalkerCheckTemplate, toWalkerGetOwner, toWalkerGetPassAndIP
 #from promise.adapter.models import AnsibleAPIwithPasswd
 from gryphon.api import AnsibleAPIwithPasswd
-from promise.eater.models import Responsibility, Software, OSUser
+#from promise.eater.models import Responsibility, Software, OSUser
 
 
 class Enum(tuple):

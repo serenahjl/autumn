@@ -377,13 +377,13 @@ class CompnInstAPI(Resource):
             print res
             return res
 
-        current_user_try=_dict_to_object(current_user)
+        current_user=Struct(user_id=123,deleted=0,valid=1)
 
         compninst_id = args['compninst_id']
         if compninst_id is not None:
             try:
                 compn_inst = CompnInst.get_compninsts(
-                    compninst_id=compninst_id, owner_id=current_user_try.user_id)[0]
+                    compninst_id=compninst_id, owner_id=current_user.user_id)[0]
             except:
                 app.logger.info(utils.logmsg('wrong compninst id.'))
                 raise exception.ClientUnprocEntError('wrong compninst id.')

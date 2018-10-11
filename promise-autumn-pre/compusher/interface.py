@@ -7,7 +7,7 @@
 # This is the mgmt module of compusher package,
 # holding component package management, etc.
 #
-owner_id
+
 
 from flask import request
 from flask_restful import reqparse, Resource

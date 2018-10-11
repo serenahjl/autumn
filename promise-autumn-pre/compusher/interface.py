@@ -368,7 +368,7 @@ class CompnInstAPI(Resource):
             def __init__(self, **entries):
                 self.__dict__.update(entries)
 
-        def _dict_to_object(self,policys):
+        def _dict_to_object(policys):
             policys_length = len(policys['policys'])
             res = []
             for i in range(policys_length):
@@ -377,7 +377,7 @@ class CompnInstAPI(Resource):
             print res
             return res
 
-        current_user_try=self._dict_to_object(current_user)
+        current_user_try=_dict_to_object(current_user)
 
         compninst_id = args['compninst_id']
         if compninst_id is not None:

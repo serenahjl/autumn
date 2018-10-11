@@ -191,8 +191,10 @@ class Compn(db.Model):
         ext_dict = dict()
 
         # get owner info
+
         owner = User.query.get(self.owner_id)
         ext_dict['owner'] = owner.get_short_dict_info()
+
         # eater_owner = toWalkerGetOwner(self.eater_owner_id)
         # if eater_owner is not None:
         #     ext_dict['eater_owner'] = eater_owner.to_dict(ignore=['conn_pass', 'it', 'software'])

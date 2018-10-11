@@ -7,6 +7,7 @@
 # This is the mgmt module of compusher package,
 # holding component package management, etc.
 #
+current_user
 
 from flask import request
 from flask_restful import reqparse, Resource
@@ -126,7 +127,9 @@ class CompnAPI(Resource):
 
 
     def get(self):
-        [compn, current_user] = self._get_arg_check()
+        [compn,
+         #current_user
+         ] = self._get_arg_check()
         if compn is not None:
             compn_dict = compn.get_dict_info()
             msg = 'compn info.'
@@ -177,7 +180,9 @@ class CompnAPI(Resource):
         delete one component
         """
         # check the arguments
-        [compn, current_user] = self._delete_arg_check()
+        [compn,
+         #current_user
+         ] = self._delete_arg_check()
         [state, msg] = compn.delete()
         if not state:
             msg = 'delete compn faild.'
@@ -235,7 +240,9 @@ class CompnAPI(Resource):
         return {"message": 'compn updated.', 'compn_id': compn.compn_id}, 200
 
     def _put_arg_check(self):
-        [compn, current_user] = self._delete_arg_check()
+        [compn,
+         #current_user
+          ] = self._delete_arg_check()
         [owner, compn_name, description, default_params, yml_fname,
          #eater_version, eater_reload_cmd,
          #eater_port, eater_runtime_id, eater_mid_type, eater_owner_id
@@ -321,7 +328,9 @@ class CompnInstAPI(Resource):
 
 
     def get(self):
-        [compn_inst, current_user] = self._get_arg_check()
+        [compn_inst,
+         current_user
+         ] = self._get_arg_check()
         if compn_inst is not None:
             compninst_dict = compn_inst.get_dict_info()
             msg = 'componet instance info.'
@@ -351,6 +360,9 @@ class CompnInstAPI(Resource):
         # except:
         #     app.logger.debug(utils.logmsg('wrong user_id in token.'))
         #     raise exception.ClientUnauthError('wrong user_id in token.')
+
+       #假数据
+        current_user=[{'user_id':123}]
 
         compninst_id = args['compninst_id']
         if compninst_id is not None:

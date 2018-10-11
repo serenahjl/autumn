@@ -16,7 +16,7 @@ from explorer.explorer import ExplorerInf
 from sqlalchemy import and_, or_
 from sqlalchemy.dialects.mysql import TEXT, LONGTEXT
 # from .. import celery
-from .. import celery
+from . import celery
 from celery.contrib.methods import task_method
 import datetime
 import json

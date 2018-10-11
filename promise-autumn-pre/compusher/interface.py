@@ -89,16 +89,17 @@ class CompnAPI(Resource):
 
         args = self.reqparse.parse_args()
 
-        try:
-            #owner = User.get_users(user_id=g.current_user_id)[0]
-            #现在通过msclient来获取current_user_id
-            token = request.headers.get('Authorization')
-            current_user_id = msclient.token_decode(token)['user_id']
-            owner = User.get_users(user_id=current_user_id)[0]
-
-        except:
-            app.logger.debug(utils.logmsg('wrong user_id in token.'))
-            raise exception.ClientUnauthError('wrong user_id in token.')
+      #要使用butler的接口获取user_id对应的数据，不能用原来的模型，但是现在本地也没有数据，所以先注释
+        # try:
+        #     #owner = User.get_users(user_id=g.current_user_id)[0]
+        #     #现在通过msclient来获取current_user_id
+        #     token = request.headers.get('Authorization')
+        #     current_user_id = msclient.token_decode(token)['user_id']
+        #     owner = User.get_users(user_id=current_user_id)[0]
+        #
+        # except:
+        #     app.logger.debug(utils.logmsg('wrong user_id in token.'))
+        #     raise exception.ClientUnauthError('wrong user_id in token.')
 
         compn_name = args['compn_name']
         yml_fname = args['yml_fname']
@@ -117,7 +118,9 @@ class CompnAPI(Resource):
         #         raise utils.ClientUnprocEntError('wrong eater_owner_id.')
         # else:
         #     eater_owner_id = None
-        return [owner, compn_name, description, default_params, yml_fname,
+        return [
+                #owner,
+                compn_name, description, default_params, yml_fname,
                  #eater_version,eater_reload_cmd, eater_port, eater_runtime_id, eater_mid_type, eater_owner_id
                  ]
 
@@ -140,18 +143,19 @@ class CompnAPI(Resource):
             'compn_id', type=str, location='args', help='compn_id must be a string.')
         args = self.reqparse.parse_args()
 
-        try:
-            #current_user = User.get_users(user_id=g.current_user_id)[0]
-
-            #现在通过新方法获取current_user_id
-            token = request.headers.get('Authorization')
-            current_user_id = msclient.token_decode(token)['user_id']
-            current_user = User.get_users(user_id=current_user_id)[0]
-
-
-        except:
-            app.logger.debug(utils.logmsg('wrong user_id in token.'))
-            raise exception.ClientUnauthError('wrong user_id in token.')
+        #要调用butler的接口获取current_user_id,现在先注释掉
+        # try:
+        #     #current_user = User.get_users(user_id=g.current_user_id)[0]
+        #
+        #     #现在通过新方法获取current_user_id
+        #     token = request.headers.get('Authorization')
+        #     current_user_id = msclient.token_decode(token)['user_id']
+        #     current_user = User.get_users(user_id=current_user_id)[0]
+        #
+        #
+        # except:
+        #     app.logger.debug(utils.logmsg('wrong user_id in token.'))
+        #     raise exception.ClientUnauthError('wrong user_id in token.')
 
         compn_id = args['compn_id']
         if compn_id is not None:
@@ -160,9 +164,13 @@ class CompnAPI(Resource):
             except:
                 app.logger.info(utils.logmsg('wrong compn id.'))
                 raise exception.ClientUnprocEntError('wrong component id.')
-            return [compn, current_user]
+            return [compn,
+                    #current_user
+             ]
         else:
-            return [None, current_user]
+            return [None,
+                    #current_user
+             ]
 
     def delete(self):
         """
@@ -186,25 +194,28 @@ class CompnAPI(Resource):
         args = self.reqparse.parse_args()
         compn_id = args['compn_id']
 
-        try:
-            #current_user = User.get_users(user_id=g.current_user_id)[0]
-
-            #现在通过msclient获取current_user_id
-            token = request.headers.get('Authorization')
-            current_user_id = msclient.token_decode(token)['user_id']
-            current_user = User.get_users(user_id=current_user_id)[0]
-
-
-        except:
-            app.logger.info(utils.logmsg('wrong user_id in token.'))
-            raise exception.ClientUnprocEntError('wrong user_id in token.')
+        #要调用butler的接口获取current_user_id,现在先注释掉
+        # try:
+        #     #current_user = User.get_users(user_id=g.current_user_id)[0]
+        #
+        #     #现在通过msclient获取current_user_id
+        #     token = request.headers.get('Authorization')
+        #     current_user_id = msclient.token_decode(token)['user_id']
+        #     current_user = User.get_users(user_id=current_user_id)[0]
+        #
+        #
+        # except:
+        #     app.logger.info(utils.logmsg('wrong user_id in token.'))
+        #     raise exception.ClientUnprocEntError('wrong user_id in token.')
 
         try:
             compn = Compn.get_compns(compn_id=compn_id)[0]
         except:
             app.logger.info(utils.logmsg('wrong compn_id.'))
             raise exception.ClientUnprocEntError('wrong compn_id.')
-        return [compn, current_user]
+        return [compn,
+                #current_user
+                ]
 
 
     def put(self):
@@ -265,19 +276,19 @@ class CompnInstAPI(Resource):
             help='host_params must be a list like[{"host_id":xx,"params":xx},...].')
 
         args = self.reqparse.parse_args()
-
-        try:
-           # current_user = User.get_users(user_id=g.current_user_id)[0]
-
-          #现在用msclient来获取current_user_id
-            token = request.headers.get('Authorization')
-            current_user_id = msclient.token_decode(token)['user_id']
-            current_user = User.get_users(user_id=current_user_id)[0]
-
-
-        except:
-            app.logger.debug(utils.logmsg('wrong user_id in token.'))
-            raise exception.ClientUnauthError('wrong user_id in token.')
+        # 要调用butler的接口获取current_user_id,现在先注释掉
+        # try:
+        #    # current_user = User.get_users(user_id=g.current_user_id)[0]
+        #
+        #   #现在用msclient来获取current_user_id
+        #     token = request.headers.get('Authorization')
+        #     current_user_id = msclient.token_decode(token)['user_id']
+        #     current_user = User.get_users(user_id=current_user_id)[0]
+        #
+        #
+        # except:
+        #     app.logger.debug(utils.logmsg('wrong user_id in token.'))
+        #     raise exception.ClientUnauthError('wrong user_id in token.')
 
         compn_id = args['compn_id']
         try:
@@ -304,7 +315,9 @@ class CompnInstAPI(Resource):
             # host = toWalkerGetHost(id=host_params['host_id'])
             # if host is None:
             #     raise utils.ClientUnprocEntError('wrong host_id in hosts_params.')
-        return [current_user, compn, description, hosts_params]
+        return [
+              #current_user,
+                compn, description, hosts_params]
 
 
     def get(self):
@@ -325,18 +338,19 @@ class CompnInstAPI(Resource):
             'compninst_id', type=str, location='args', help='compninst_id must be a string.')
         args = self.reqparse.parse_args()
 
-        try:
-            #current_user = User.get_users(user_id=g.current_user_id)[0]
-
-           #现在用msclent来获取current_user_id
-            token = request.headers.get('Authorization')
-            current_user_id = msclient.token_decode(token)['user_id']
-            current_user = User.get_users(user_id=current_user_id)[0]
-
-
-        except:
-            app.logger.debug(utils.logmsg('wrong user_id in token.'))
-            raise exception.ClientUnauthError('wrong user_id in token.')
+       #要调用butler的接口获取current_user_id,现在先注释掉
+        # try:
+        #     #current_user = User.get_users(user_id=g.current_user_id)[0]
+        #
+        #    #现在用msclent来获取current_user_id
+        #     token = request.headers.get('Authorization')
+        #     current_user_id = msclient.token_decode(token)['user_id']
+        #     current_user = User.get_users(user_id=current_user_id)[0]
+        #
+        #
+        # except:
+        #     app.logger.debug(utils.logmsg('wrong user_id in token.'))
+        #     raise exception.ClientUnauthError('wrong user_id in token.')
 
         compninst_id = args['compninst_id']
         if compninst_id is not None:
@@ -346,6 +360,10 @@ class CompnInstAPI(Resource):
             except:
                 app.logger.info(utils.logmsg('wrong compninst id.'))
                 raise exception.ClientUnprocEntError('wrong compninst id.')
-            return [compn_inst, current_user]
+            return [compn_inst,
+                    #current_user
+                    ]
         else:
-            return [None, current_user]
+            return [None,
+                    #current_user
+                    ]

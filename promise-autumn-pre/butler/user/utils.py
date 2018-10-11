@@ -4,6 +4,7 @@
 # Author: daisheng
 # Email: shawntai.ds@gmail.com
 #
-
+import sys
+sys.path.append('..')
 from ..utils  import *
 

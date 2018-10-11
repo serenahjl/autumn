@@ -194,8 +194,8 @@ class Compn(db.Model):
 
         # get owner info
 
-        owner = User.query.get(self.owner_id)
-        ext_dict['owner'] = owner.get_short_dict_info()
+        # owner = User.query.get(self.owner_id)
+        # ext_dict['owner'] = owner.get_short_dict_info()
 
         # eater_owner = toWalkerGetOwner(self.eater_owner_id)
         # if eater_owner is not None:

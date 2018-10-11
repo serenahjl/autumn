@@ -362,7 +362,7 @@ class CompnInstAPI(Resource):
         #     raise exception.ClientUnauthError('wrong user_id in token.')
 
        #假数据
-        current_user=[{'user_id':123},{'deleted':0},{'valid':1}]
+        current_user={'user_id':123,'deleted':0,'valid':1}
 
         compninst_id = args['compninst_id']
         if compninst_id is not None:

@@ -263,7 +263,9 @@ class CompnInst(db.Model):
         self.compninst_id = utils.genUuid()
         self.compn_id = compn.compn_id
         self.description = description
-        self.owner_id = owner.user_id
+        #self.owner_id = owner.user_id
+        #假数据
+        self.owner_id = owner
         self.hosts_params = json.dumps(hosts_params)
         self.deleted = deleted
         [state, msg] = compn.chk_files_status()
@@ -310,8 +312,8 @@ class CompnInst(db.Model):
         ext_dict = dict()
 
         # get owner info
-        owner = User.query.get(self.owner_id)
-        ext_dict['owner'] = owner.get_short_dict_info()
+        # owner = User.query.get(self.owner_id)
+        # ext_dict['owner'] = owner.get_short_dict_info()
 
         # get compn info
         compn = Compn.query.get(self.compn_id)

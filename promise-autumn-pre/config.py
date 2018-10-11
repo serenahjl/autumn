@@ -162,3 +162,48 @@ REDIS_HOST = '192.168.182.51'
 REDIS_PORT = 6379
 REDIS_PWD = 'qwe123'
 
+
+
+"""
+    Kong & privileges
+"""
+KONGADM_URL = 'http://192.168.182.52:8001'
+KONGADM_APIKEY = None
+KONGADM_BASICAUTH_USERNAME = None
+KONGADM_BASICAUTH_PASSWORD = None
+
+ANONYMOUS_API_NAMES = ['auth',
+                       'spiderman-options',
+                       'virtman-options',
+                       'dora-options',
+                       'butler-options',
+                       'jarvis-options',
+                       'agamotto-options',
+                       'explorer-options',
+                       'applet-options',
+                       'sakura-options',
+                       'magneto-options']
+NOACL_API_NAMES = ['butler-user-myself', 'token']
+
+DEFAULT_ROOT_USERNAME = 'admin'
+DEFAULT_ROOT_PASSWORD = 'admin'
+DEFAULT_ROOT_ROLENAME = 'root_role'
+# DEFAULT_BASE_ROLENAME = 'base_role'
+
+# encryption keys
+SECRET_KEY = 'your SECRET_KEY'
+# salt used by token generation
+AUTH_SALT = 'your AUTH SALT'
+# salt used by password md5 hash
+PSW_SALT = 'your PSW SALT'
+
+"""
+    kong
+"""
+KONG_URL = 'http://172.40.224.15:8000'
+KONG_USER = 'butler'
+KONG_PWD = '0f3ea81cc87742c74dff0abac1d6bcc45356bd7e52c' \
+           'c852866d6d0fb53980e2a72d03fe4321b573503fd8c' \
+           '7f3c9a35572d0a5208dd3ba982f457aa174423506b'
+
+

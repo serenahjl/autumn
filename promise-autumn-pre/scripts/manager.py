@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 import sys
-sys.path.append('.')
+sys.path.append('..')
 
 from flask_script import Manager, Shell
 from flask_migrate import Migrate, MigrateCommand

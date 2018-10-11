@@ -1,6 +1,6 @@
 import uuid
 from . import app
-from ..import db, app,api
+from .import db, app,api
 from flask import request, make_response, json
 import datetime
 import re

@@ -7,23 +7,23 @@
 # This is the mgmt module of compusher package,
 # holding component package management, etc.
 #
-from . import app
+
 from flask import request
 from flask_restful import reqparse, Resource
 #from ..user import auth
 #from ..user.models import User, Role
 from bulter.user.models import User,Role
 from gryphon import msclient
-from ..explorer.explorer import ExplorerInf
+#from ..explorer.explorer import ExplorerInf
 from . import app
-from flask import g
+#from flask import g
 from . import utils
 from . import exception
 from .models import Compn, CompnInst
 import os
 import tarfile
 import werkzeug
-from promise.eater.interfaces import toWalkerGetHost, toWalkerGetOwner
+#from promise.eater.interfaces import toWalkerGetHost, toWalkerGetOwner
 import datetime
 
 COMPN_PACK_EXTENSIONS = set(['zip', 'tar.gz'])

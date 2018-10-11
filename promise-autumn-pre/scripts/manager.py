@@ -6,6 +6,7 @@ sys.path.append('.')
 from flask_script import Manager, Shell
 from flask_migrate import Migrate, MigrateCommand
 from compusher import app, db
+from compusher .models import Compn,Enum
 
 
 migrate = Migrate(app, db)

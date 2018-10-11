@@ -1,6 +1,6 @@
 
-#!/usr/bin/env python
-# -*- coding:utf-8 -*-
+# !/usr/bin/env python
+#  -*- coding:utf-8 -*-
 
 from __future__ import absolute_import
 import os
@@ -66,7 +66,7 @@ cors = CORS(app, allow_headers='*', expose_headers='Content-Disposition')
 flask_cache_control = FlaskCacheControl()
 flask_cache_control.init_app(app)
 
-#celery init
+# celery init
 from celery import Celery
 
 def make_celery(app):
@@ -83,6 +83,5 @@ def make_celery(app):
 
     celery.Task = ContextTask
     return celery
-
 
 celery = make_celery(app)

@@ -364,11 +364,26 @@ class CompnInstAPI(Resource):
        #假数据
         current_user={'user_id':123,'deleted':0,'valid':1}
 
+        class Struct:
+            def __init__(self, **entries):
+                self.__dict__.update(entries)
+
+            def _dict_to_object(policys):
+                policys_length = len(policys['policys'])
+                res = []
+                for i in range(policys_length):
+                    policy = Struct(**policys['policys'][i])
+                    res.append(policy)
+                print res
+                return res
+
+        current_user_try=self._dict_to_object(current_user)
+
         compninst_id = args['compninst_id']
         if compninst_id is not None:
             try:
                 compn_inst = CompnInst.get_compninsts(
-                    compninst_id=compninst_id, owner_id=current_user.user_id)[0]
+                    compninst_id=compninst_id, owner_id=current_user_try.user_id)[0]
             except:
                 app.logger.info(utils.logmsg('wrong compninst id.'))
                 raise exception.ClientUnprocEntError('wrong compninst id.')

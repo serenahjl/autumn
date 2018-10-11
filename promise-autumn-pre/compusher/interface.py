@@ -57,16 +57,24 @@ class CompnAPI(Resource):
 
     def _post_arg_check(self):
         self.reqparse.add_argument(
-            'compn_name', type=str, location='json',
+            'compn_name',
+            #type=str,
+            location='json',
             required=True, help='compn_name must be a string.')
         self.reqparse.add_argument(
-            'description', type=unicode, location='json',
-            required=True, help='description must be unicode.')
+            'description',
+            #type=unicode,
+            location='json',
+            required=False, help='description must be unicode.')
         self.reqparse.add_argument(
-            'default_params', type=unicode, location='json',
+            'default_params',
+            #type=unicode,
+            location='json',
             help='default_params must be unicode.')
         self.reqparse.add_argument(
-            'yml_fname', type=str, location='json',
+            'yml_fname',
+            #type=str,
+            location='json',
             required=True, help='yml_fname must have been a uploaded yml filename.')
 
         # self.reqparse.add_argument(

@@ -373,9 +373,9 @@ class CompnInstAPI(Resource):
                 app.logger.info(utils.logmsg('wrong compninst id.'))
                 raise exception.ClientUnprocEntError('wrong compninst id.')
             return [compn_inst,
-                    #current_user
+                    current_user
                     ]
         else:
             return [None,
-                    #current_user
+                    current_user
                     ]

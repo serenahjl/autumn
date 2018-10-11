@@ -6,7 +6,7 @@ sys.path.append('.')
 
 from flask.ext.script import Manager, Shell, prompt_bool
 from flask.ext.migrate import Migrate, MigrateCommand
-from .import app, db
+from butler import app, db
 from user.models import init_user_data
 
 migrate = Migrate(app, db)

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="abbc16e5-ced1-42fb-b7b4-3e7b5b471731" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/promise-autumn-pre/compusher/interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/promise-autumn-pre/compusher/interface.py" afterDir="false" />
-    </list>
+    <list default="true" id="abbc16e5-ced1-42fb-b7b4-3e7b5b471731" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,8 +168,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/promise-autumn-pre/compusher/interface.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="379" column="35" lean-forward="true" selection-start-line="379" selection-start-column="35" selection-end-line="379" selection-end-column="35" />
+            <state relative-caret-position="271">
+              <caret line="376" column="25" lean-forward="true" selection-start-line="376" selection-start-column="25" selection-end-line="376" selection-end-column="25" />
               <folding>
                 <element signature="e#195#220#0" expanded="true" />
               </folding>
@@ -660,8 +658,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/promise-autumn-pre/compusher/interface.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="379" column="35" lean-forward="true" selection-start-line="379" selection-start-column="35" selection-end-line="379" selection-end-column="35" />
+        <state relative-caret-position="271">
+          <caret line="376" column="25" lean-forward="true" selection-start-line="376" selection-start-column="25" selection-end-line="376" selection-end-column="25" />
           <folding>
             <element signature="e#195#220#0" expanded="true" />
           </folding>

@@ -368,18 +368,16 @@ class CompnInstAPI(Resource):
             def __init__(self, **entries):
                 self.__dict__.update(entries)
 
-            def _dict_to_object(policys):
-                policys_length = len(policys['policys'])
-                res = []
-                for i in range(policys_length):
-                    policy = Struct(**policys['policys'][i])
-                    res.append(policy)
-                print res
-                return res
+        def _dict_to_object(self,policys):
+            policys_length = len(policys['policys'])
+            res = []
+            for i in range(policys_length):
+                policy = Struct(**policys['policys'][i])
+                res.append(policy)
+            print res
+            return res
 
-        struct=Struct()
-        current_user_try=struct._dict_to_object(current_user)
-        #current_user_try=self._dict_to_object(current_user)
+        current_user_try=self._dict_to_object(current_user)
 
         compninst_id = args['compninst_id']
         if compninst_id is not None:

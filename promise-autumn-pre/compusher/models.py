@@ -27,7 +27,7 @@ from celery.exceptions import SoftTimeLimitExceeded
 #from promise.eater.interfaces import toWalkerGetGroup, toWalkerGetResponsible, toWalkerGetEnv
 #from promise.eater.interfaces import toWalkerCheckTemplate, toWalkerGetOwner, toWalkerGetPassAndIP
 #from promise.adapter.models import AnsibleAPIwithPasswd
-from gryphon.api import AnsibleAPIwithPasswd
+from gryphon.api import Ansible2API
 #from promise.eater.models import Responsibility, Software, OSUser
 
 
@@ -355,7 +355,7 @@ class CompnInst(db.Model):
                 'host': 'ip_try',
                 'params': host_params['params']})
         playbook = "%s/%s" % (pbs_path, compn.yml_fname)
-        pb_exec = AnsibleAPIwithPasswd(
+        pb_exec = Ansible2API(
             remote_user=app.config['COMPN_REMOTE_USER'],
             key_file=None,
             become_user=app.config['COMPN_REMOTE_USER'],

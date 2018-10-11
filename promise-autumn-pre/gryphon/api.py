@@ -7,6 +7,8 @@
 #
 # This is the adapter module of external api.
 #
+
+
 __all__ = ['DisconfAPI', 'DisconfAPIException', 'Ansible2API', 'ZabbixAPI',
            'ZabbixAPIException', 'EtcdAPI', 'EtcdAPIException', 'MySQLAPI',
            'MySQLAPIException', 'MinioAPI', 'MinioAPIException']

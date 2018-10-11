@@ -53,7 +53,9 @@ class Compn(db.Model):
     compn_id = db.Column(db.String(64), primary_key=True)
     compn_name = db.Column(db.String(64), nullable=False)
     description = db.Column(TEXT)
-    owner_id = db.Column(db.String(64), db.ForeignKey('user.user_id'))
+
+    #owner_id = db.Column(db.String(64), db.ForeignKey('user.user_id'))
+
     deleted = db.Column(db.SmallInteger, nullable=False)
     call_times = db.Column(db.BigInteger)
 
@@ -238,7 +240,7 @@ class CompnInst(db.Model):
     __tablename__ = 'compn_inst'
     compninst_id = db.Column(db.String(64), primary_key=True)
     description = db.Column(TEXT)
-    owner_id = db.Column(db.String(64), db.ForeignKey('user.user_id'))
+    #owner_id = db.Column(db.String(64), db.ForeignKey('user.user_id'))
     deleted = db.Column(db.SmallInteger, nullable=False)
     compn_id = db.Column(db.String(64), db.ForeignKey('compn.compn_id'), nullable=False)
 

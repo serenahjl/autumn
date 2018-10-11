@@ -117,7 +117,7 @@ class CompnAPI(Resource):
         #         raise utils.ClientUnprocEntError('wrong eater_owner_id.')
         # else:
         #     eater_owner_id = None
-         return [owner, compn_name, description, default_params, yml_fname,
+        return [owner, compn_name, description, default_params, yml_fname,
                  #eater_version,eater_reload_cmd, eater_port, eater_runtime_id, eater_mid_type, eater_owner_id
                  ]
 

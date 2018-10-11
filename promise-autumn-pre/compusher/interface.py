@@ -377,7 +377,7 @@ class CompnInstAPI(Resource):
                 print res
                 return res
 
-        struct=Struct(current_user)
+        struct=Struct()
         current_user_try=struct._dict_to_object(current_user)
         #current_user_try=self._dict_to_object(current_user)
 

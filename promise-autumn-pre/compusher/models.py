@@ -241,6 +241,8 @@ class CompnInst(db.Model):
     compninst_id = db.Column(db.String(64), primary_key=True)
     description = db.Column(TEXT)
     #owner_id = db.Column(db.String(64), db.ForeignKey('user.user_id'))
+    #假owner_id
+    owner_id = db.Column(db.String(64))
     deleted = db.Column(db.SmallInteger, nullable=False)
     compn_id = db.Column(db.String(64), db.ForeignKey('compn.compn_id'), nullable=False)
 

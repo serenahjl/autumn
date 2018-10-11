@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="abbc16e5-ced1-42fb-b7b4-3e7b5b471731" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/promise-autumn-pre/compusher/interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/promise-autumn-pre/compusher/interface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/promise-autumn-pre/compusher/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/promise-autumn-pre/compusher/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,30 +66,33 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="2" />
-          <entry key="py" value="1241" />
+          <entry key="py" value="1257" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="1241" />
+          <entry key="Python" value="1257" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/promise-autumn-pre/compusher/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3801">
-              <caret line="213" lean-forward="true" selection-start-line="213" selection-end-line="213" />
+            <state relative-caret-position="143">
+              <caret line="247" lean-forward="true" selection-start-line="247" selection-end-line="247" />
               <folding>
                 <element signature="e#150#171#0" expanded="true" />
+                <element signature="e#1333#7644#0" />
                 <element signature="e#7673#8411#0" />
+                <element signature="e#9274#9801#0" />
                 <element signature="e#9831#10229#0" />
                 <element signature="e#10271#10316#0" />
-                <element signature="e#10432#10795#0" />
+                <element signature="e#10834#11850#0" />
+                <element signature="e#12010#12021#0" />
               </folding>
             </state>
           </provider>
@@ -168,11 +172,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/promise-autumn-pre/compusher/interface.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="376" column="21" lean-forward="true" selection-start-line="376" selection-start-column="21" selection-end-line="376" selection-end-column="21" />
+            <state relative-caret-position="491">
+              <caret line="394" column="19" lean-forward="true" selection-start-line="394" selection-start-column="19" selection-end-line="394" selection-end-column="19" />
               <folding>
                 <element signature="e#195#220#0" expanded="true" />
               </folding>
@@ -207,8 +211,9 @@
       <find>AnsibleAPIwithPasswd</find>
       <find>owner</find>
       <find>User</find>
-      <find>current_user</find>
       <find>compn_insts</find>
+      <find>current_user</find>
+      <find>owner_id</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -238,10 +243,10 @@
         <option value="$PROJECT_DIR$/promise-autumn-pre/butler/manager.py" />
         <option value="$PROJECT_DIR$/promise-autumn-pre/butler/utils.py" />
         <option value="$PROJECT_DIR$/promise-autumn-pre/butler/user/utils.py" />
-        <option value="$PROJECT_DIR$/promise-autumn-pre/compusher/models.py" />
         <option value="$PROJECT_DIR$/promise-autumn-pre/compusher/__init__.py" />
         <option value="$PROJECT_DIR$/promise-autumn-pre/runserver.py" />
         <option value="$PROJECT_DIR$/promise-autumn-pre/compusher/interface.py" />
+        <option value="$PROJECT_DIR$/promise-autumn-pre/compusher/models.py" />
       </list>
     </option>
   </component>
@@ -646,26 +651,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/promise-autumn-pre/compusher/models.py">
+    <entry file="file://$PROJECT_DIR$/promise-autumn-pre/compusher/interface.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3801">
-          <caret line="213" lean-forward="true" selection-start-line="213" selection-end-line="213" />
+        <state relative-caret-position="491">
+          <caret line="394" column="19" lean-forward="true" selection-start-line="394" selection-start-column="19" selection-end-line="394" selection-end-column="19" />
           <folding>
-            <element signature="e#150#171#0" expanded="true" />
-            <element signature="e#7673#8411#0" />
-            <element signature="e#9831#10229#0" />
-            <element signature="e#10271#10316#0" />
-            <element signature="e#10432#10795#0" />
+            <element signature="e#195#220#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/promise-autumn-pre/compusher/interface.py">
+    <entry file="file://$PROJECT_DIR$/promise-autumn-pre/compusher/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="376" column="21" lean-forward="true" selection-start-line="376" selection-start-column="21" selection-end-line="376" selection-end-column="21" />
+        <state relative-caret-position="143">
+          <caret line="247" lean-forward="true" selection-start-line="247" selection-end-line="247" />
           <folding>
-            <element signature="e#195#220#0" expanded="true" />
+            <element signature="e#150#171#0" expanded="true" />
+            <element signature="e#1333#7644#0" />
+            <element signature="e#7673#8411#0" />
+            <element signature="e#9274#9801#0" />
+            <element signature="e#9831#10229#0" />
+            <element signature="e#10271#10316#0" />
+            <element signature="e#10834#11850#0" />
+            <element signature="e#12010#12021#0" />
           </folding>
         </state>
       </provider>

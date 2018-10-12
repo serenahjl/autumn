@@ -5,7 +5,7 @@
 # Email: dai.sheng@139.com
 #
 # This is the model module for the compenont package
-
+chk_files_status
 
 from . import db, app
 from . import utils

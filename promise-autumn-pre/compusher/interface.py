@@ -110,6 +110,14 @@ class CompnAPI(Resource):
         #     app.logger.debug(utils.logmsg('wrong user_id in token.'))
         #     raise exception.ClientUnauthError('wrong user_id in token.')
 
+        #j假数据
+        class Struct:
+            def __init__(self, **entries):
+                self.__dict__.update(entries)
+
+        owner = Struct(user_id=123, deleted=0, valid=1)
+
+
         compn_name = args['compn_name']
         yml_fname = args['yml_fname']
 
@@ -128,7 +136,7 @@ class CompnAPI(Resource):
         # else:
         #     eater_owner_id = None
         return [
-                #owner,
+                owner,
                 compn_name, description, default_params, yml_fname,
                  #eater_version,eater_reload_cmd, eater_port, eater_runtime_id, eater_mid_type, eater_owner_id
                  ]

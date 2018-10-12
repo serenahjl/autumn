@@ -209,7 +209,7 @@ class CompnAPI(Resource):
 
     def _delete_arg_check(self):
         self.reqparse.add_argument(
-            'compn_id', type=str, location='args',
+            'compn_id', type=str, location='json',
             required=True, help='compn id must be a string')
 
         args = self.reqparse.parse_args()

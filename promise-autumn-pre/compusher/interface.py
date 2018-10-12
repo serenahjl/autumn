@@ -63,7 +63,7 @@ class CompnAPI(Resource):
             required=True, help='compn_name must be a string.')
         self.reqparse.add_argument(
             'description',
-            type=str,
+            type=unicode,
             location='json',
             required=False, help='description must be unicode.')
         self.reqparse.add_argument(

@@ -163,8 +163,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/promise-autumn-pre/compusher/interface.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="252" column="42" lean-forward="true" selection-start-line="252" selection-start-column="42" selection-end-line="252" selection-end-column="42" />
+            <state relative-caret-position="225">
+              <caret line="247" column="36" lean-forward="true" selection-start-line="247" selection-start-column="36" selection-end-line="247" selection-end-column="36" />
               <folding>
                 <element signature="e#196#221#0" expanded="true" />
                 <element signature="e#970#1865#0" />
@@ -173,8 +173,8 @@
                 <element signature="e#5977#7183#0" />
                 <element signature="e#7215#7639#0" />
                 <element signature="e#7682#8771#0" />
-                <element signature="e#9779#10329#0" />
-                <marker date="1539585773594" expanded="true" signature="9771:11583" ph="..." />
+                <element signature="e#9780#11631#0" />
+                <marker date="1539586223843" expanded="true" signature="9770:11582" ph="..." />
               </folding>
             </state>
           </provider>
@@ -432,7 +432,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20499243" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -667,8 +666,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/promise-autumn-pre/compusher/interface.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="252" column="42" lean-forward="true" selection-start-line="252" selection-start-column="42" selection-end-line="252" selection-end-column="42" />
+        <state relative-caret-position="225">
+          <caret line="247" column="36" lean-forward="true" selection-start-line="247" selection-start-column="36" selection-end-line="247" selection-end-column="36" />
           <folding>
             <element signature="e#196#221#0" expanded="true" />
             <element signature="e#970#1865#0" />
@@ -677,8 +676,8 @@
             <element signature="e#5977#7183#0" />
             <element signature="e#7215#7639#0" />
             <element signature="e#7682#8771#0" />
-            <element signature="e#9779#10329#0" />
-            <marker date="1539585773594" expanded="true" signature="9771:11583" ph="..." />
+            <element signature="e#9780#11631#0" />
+            <marker date="1539586223843" expanded="true" signature="9770:11582" ph="..." />
           </folding>
         </state>
       </provider>

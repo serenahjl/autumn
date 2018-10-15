@@ -244,7 +244,7 @@ class CompnAPI(Resource):
          #owner,
          compn_name, description, default_params, yml_fname,
          #eater_version, eater_reload_cmd, eater_port, eater_runtime_id, eater_mid_type, eater_owner_id
-         ] = self._put_arg_check()
+         ] = self._put_arg_check2()
         [state, msg] = compn.update(
             yml_fname=yml_fname, compn_name=compn_name, description=description,
             #eater_reload_cmd=eater_reload_cmd,
@@ -256,6 +256,63 @@ class CompnAPI(Resource):
             raise exception.ServerError('compn update faild.')
         app.logger.info(utils.logmsg('compn ' + compn.compn_id + ' updated.'))
         return {"message": 'compn updated.', 'compn_id': compn.compn_id}, 200
+
+    def _put_arg_check2(self):
+        self.reqparse.add_argument(
+            'compn_id', type=str, location='json',
+            required=True, help='compn id must be a string')
+
+        args = self.reqparse.parse_args()
+        compn_id = args['compn_id']
+        
+        try:
+            compn = Compn.get_compns(compn_id=compn_id)[0]
+        except:
+            app.logger.info(utils.logmsg('wrong compn_id.'))
+            raise exception.ClientUnprocEntError('wrong compn_id.')
+
+        self.reqparse.add_argument(
+            'compn_name',
+            type=str,
+            location='json',
+            required=True, help='compn_name must be a string.')
+        self.reqparse.add_argument(
+            'description',
+            type=unicode,
+            location='json',
+            required=False, help='description must be unicode.')
+        self.reqparse.add_argument(
+            'default_params',
+            type=unicode,
+            location='json',
+            help='default_params must be unicode.')
+        self.reqparse.add_argument(
+            'yml_fname',
+            type=str,
+            location='json',
+            required=True, help='yml_fname must have been a uploaded yml filename.')
+
+        args = self.reqparse.parse_args()
+
+        class Struct:
+            def __init__(self, **entries):
+                self.__dict__.update(entries)
+
+        owner = Struct(user_id=123, deleted=0, valid=1)
+
+
+        compn_name = args['compn_name']
+        yml_fname = args['yml_fname']
+
+        description = args['description']
+        default_params = args['default_params']
+
+        return [compn,
+                 owner,
+                compn_name, description, default_params, yml_fname,
+                # eater_version, eater_reload_cmd, eater_port, eater_runtime_id, eater_mid_type, eater_owner_id
+                ]
+
 
     def _put_arg_check(self):
         [compn,

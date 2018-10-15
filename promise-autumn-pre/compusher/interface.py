@@ -240,7 +240,9 @@ class CompnAPI(Resource):
 
 
     def put(self):
-        [compn, owner, compn_name, description, default_params, yml_fname,
+        [compn,
+         #owner,
+         compn_name, description, default_params, yml_fname,
          #eater_version, eater_reload_cmd, eater_port, eater_runtime_id, eater_mid_type, eater_owner_id
          ] = self._put_arg_check()
         [state, msg] = compn.update(
@@ -259,11 +261,15 @@ class CompnAPI(Resource):
         [compn,
          #current_user
           ] = self._delete_arg_check()
-        [owner, compn_name, description, default_params, yml_fname,
+        [
+        #owner,
+         compn_name, description, default_params, yml_fname,
          #eater_version, eater_reload_cmd,
          #eater_port, eater_runtime_id, eater_mid_type, eater_owner_id
          ] = self._post_arg_check()
-        return [compn, owner, compn_name, description, default_params, yml_fname,
+        return [compn,
+                #owner,
+                compn_name, description, default_params, yml_fname,
                 #eater_version, eater_reload_cmd, eater_port, eater_runtime_id, eater_mid_type, eater_owner_id
                 ]
 

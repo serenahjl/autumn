@@ -241,7 +241,7 @@ class CompnAPI(Resource):
 
     def put(self):
         [compn,
-         #owner,
+         owner,
          compn_name, description, default_params, yml_fname,
          #eater_version, eater_reload_cmd, eater_port, eater_runtime_id, eater_mid_type, eater_owner_id
          ] = self._put_arg_check2()
@@ -264,7 +264,7 @@ class CompnAPI(Resource):
 
         args = self.reqparse.parse_args()
         compn_id = args['compn_id']
-        
+
         try:
             compn = Compn.get_compns(compn_id=compn_id)[0]
         except:

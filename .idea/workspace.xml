@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="abbc16e5-ced1-42fb-b7b4-3e7b5b471731" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/promise-autumn-pre/compusher/interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/promise-autumn-pre/compusher/interface.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -166,8 +165,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/promise-autumn-pre/compusher/interface.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="266" column="8" lean-forward="true" selection-start-line="266" selection-start-column="8" selection-end-line="266" selection-end-column="8" />
+            <state relative-caret-position="163">
+              <caret line="244" column="27" selection-start-line="244" selection-start-column="27" selection-end-line="244" selection-end-column="27" />
               <folding>
                 <element signature="e#196#221#0" expanded="true" />
                 <element signature="e#970#1865#0" />
@@ -177,7 +176,7 @@
                 <element signature="e#7215#7639#0" />
                 <element signature="e#7682#8771#0" />
                 <element signature="e#9779#10329#0" />
-                <marker date="1539585524604" expanded="true" signature="9772:11592" ph="..." />
+                <marker date="1539585773594" expanded="true" signature="9771:11583" ph="..." />
               </folding>
             </state>
           </provider>
@@ -670,8 +669,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/promise-autumn-pre/compusher/interface.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="266" column="8" lean-forward="true" selection-start-line="266" selection-start-column="8" selection-end-line="266" selection-end-column="8" />
+        <state relative-caret-position="163">
+          <caret line="244" column="27" selection-start-line="244" selection-start-column="27" selection-end-line="244" selection-end-column="27" />
           <folding>
             <element signature="e#196#221#0" expanded="true" />
             <element signature="e#970#1865#0" />
@@ -681,7 +680,7 @@
             <element signature="e#7215#7639#0" />
             <element signature="e#7682#8771#0" />
             <element signature="e#9779#10329#0" />
-            <marker date="1539585524604" expanded="true" signature="9772:11592" ph="..." />
+            <marker date="1539585773594" expanded="true" signature="9771:11583" ph="..." />
           </folding>
         </state>
       </provider>

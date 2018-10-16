@@ -28,5 +28,30 @@ pipeline {
                     docker exec promise-spiderman-ci cp -r /apps/svr/promise-spiderman/env.conf/ci-instance /apps/svr/promise-spiderman/instance'''
       }
     }
-  }
-}
+
+
+stage('dependencies install') {
+            when {
+                branch 'dev'
+            }
+            agent {
+                label 'master'
+            }
+            steps {
+                sh '''
+                    docker exec promise-spiderman-ci pip install --upgrade pip
+                    docker exec promise-spiderman-ci pip install -r /apps/svr/promise-spiderman/requirements.txt
+                    docker exec promise-spiderman-ci pip install git+http://192.168.182.51/promise/promise-gryphon.git
+                    docker exec promise-spiderman-ci rm -rf /etc/yum.repos.d/el7_new.repo
+                    docker exec promise-spiderman-ci cp /apps/svr/promise-spiderman/env.conf/BCLinux-Base.repo /etc/yum.repos.d/
+                    docker exec promise-spiderman-ci cp /apps/svr/promise-spiderman/env.conf/BCLinux-Source.repo /etc/yum.repos.d/
+                    docker exec promise-spiderman-ci cp /apps/svr/promise-spiderman/env.conf/BigCloud.repo /etc/yum.repos.d/
+                    docker exec promise-spiderman-ci su -c "echo 223.105.0.149 mirrors.bclinux.org >> /etc/hosts"
+                    docker exec promise-spiderman-ci su -c "echo 13.250.177.223 github.com >> /etc/hosts"
+                    docker exec promise-spiderman-ci yum update nss curl -y
+                    docker exec promise-spiderman-ci pip install git+https://github.com/tecstack/forward.git@develop
+                '''
+            }
+        }
+
+        }

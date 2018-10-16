@@ -55,4 +55,42 @@ pipeline {
         }
 
         }
+
+        stage('code check && unit test') {
+            when {
+                branch 'dev'
+            }
+            agent {
+                label 'master'
+            }
+            steps {
+                sh '''
+                    docker exec promise-spiderman-ci flake8 /apps/svr/promise-spiderman --config=/apps/svr/promise-spiderman/tox.ini
+                    docker exec promise-spiderman-ci nosetests -c /apps/svr/promise-spiderman/nosetests.ini
+                    docker cp promise-spiderman-ci:/apps/svr/promise-spiderman/nosetests.xml $WORKSPACE
+                    docker cp promise-spiderman-ci:/apps/svr/promise-spiderman/coverage.xml $WORKSPACE
+                '''
+            }
+            post {
+                always {
+                    junit 'nosetests.xml'
+		            step([
+		                $class: 'CoberturaPublisher', autoUpdateHealth: false,
+		                autoUpdateStability: false, coberturaReportFile: 'coverage.xml',
+		                failUnhealthy: false, failUnstable: false, maxNumberOfBuilds: 0,
+		                onlyStable: false, sourceEncoding: 'ASCII', zoomCoverageChart: false])
+		            cleanWs()
+                }
+                success {
+                    sh '''
+                        docker rm -f promise-spiderman-ci
+                    '''
+                }
+                failure {
+                    emailext body: '$DEFAULT_CONTENT', subject: '$DEFAULT_SUBJECT', to: 'linxiaosui@139.com'
+                }
+            }
+        }
+
+
 }

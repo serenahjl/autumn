@@ -15,6 +15,12 @@ pipeline {
       }
     }
     stage('pull package') {
+      agent {
+        node {
+          label 'master'
+        }
+        
+      }
       steps {
         sh '''docker exec promise-spiderman-ci git clone -b dev http://192.168.182.51/promise/promise-spiderman.git /apps/svr/promise-spiderman
                     docker exec promise-spiderman-ci rm -rf /root/.pip/pip.conf

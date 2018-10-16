@@ -7,7 +7,9 @@ pipeline {
     }
     stages {
         stage('env init') {
-
+            when {
+                branch 'dev'
+            }
             agent {
                 label 'master'
             }
@@ -19,7 +21,9 @@ pipeline {
             }
         }
         stage('pull package') {
-
+            when {
+                branch 'dev'
+            }
             agent {
                 label 'master'
             }
@@ -33,7 +37,9 @@ pipeline {
             }
         }
         stage('dependencies install') {
-
+            when {
+                branch 'dev'
+            }
             agent {
                 label 'master'
             }
@@ -53,9 +59,6 @@ pipeline {
                 '''
             }
         }
-
-        }
-
         stage('code check && unit test') {
             when {
                 branch 'dev'
@@ -92,5 +95,4 @@ pipeline {
             }
         }
 
-
-}
+   }

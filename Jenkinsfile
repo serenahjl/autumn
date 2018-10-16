@@ -31,9 +31,7 @@ pipeline {
 
 
 stage('dependencies install') {
-            when {
-                branch 'dev'
-            }
+
             agent {
                 label 'master'
             }

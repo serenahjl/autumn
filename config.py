@@ -49,7 +49,7 @@ PROPAGATE_EXCEPTIONS = True
 """
     celery
 """
-#CELERY_BROKER_URL = 'amqp://promise-dev-ci:111111@192.168.182.52:5672/devci'
+# CELERY_BROKER_URL = 'amqp://promise-dev-ci:111111@192.168.182.52:5672/devci'
 CELERY_BROKER_URL = 'amqp://guest@localhost//'
 CELERY_RESULT_BACKEND = 'amqp'
 # CELERY_ACCEPT_CONTENT = ['json']

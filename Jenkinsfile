@@ -86,7 +86,7 @@ pipeline {
                     '''
                 }
                 failure {
-                    emailext body: '$DEFAULT_CONTENT', subject: '$DEFAULT_SUBJECT', to: 'linxiaosui@139.com'
+                    emailext body: '$DEFAULT_CONTENT', subject: '$DEFAULT_SUBJECT', to: 'huangjinglin@gd.chinamobile.com'
                 }
             }
         }

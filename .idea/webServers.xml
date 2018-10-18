@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="015be851-2d20-461f-8cdd-9d9039407fe9" name="local128" url="http://192.168.221.128">
+        <fileTransfer host="192.168.221.128" port="22" rootFolder="/promise/autumn/autumn/venv">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

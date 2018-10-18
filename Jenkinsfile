@@ -51,7 +51,7 @@ pipeline {
                 sh '''
                     docker exec promise-autumn-ci pip install --upgrade pip
                     docker exec promise-autumn-ci pip install -r /apps/svr/promise-autumn/requirements.txt
-                    docker exec promise-autumn-ci pip install git+http://192.168.182.51/promise/promise-gryphon.git
+                    docker exec promise-autumn-ci pip show requests
                 '''
             }
         }

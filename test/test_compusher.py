@@ -1,7 +1,7 @@
-from compusher import db,app
+from compusher import db, app
 from nose.tools import *
 from werkzeug.datastructures import FileMultiDict
-import  json
+import json
 import config
 
 # establish db

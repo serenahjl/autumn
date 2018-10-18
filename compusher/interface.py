@@ -10,16 +10,16 @@
 
 
 from flask_restful import reqparse, Resource
-#from ..user import auth
-#from ..user.models import User, Role
-#from ..explorer.explorer import ExplorerInf
+# from ..user import auth
+# from ..user.models import User, Role
+# from ..explorer.explorer import ExplorerInf
 from . import app
-#from flask import g
+# from flask import g
 from . import utils
 from . import exception
 from .models import Compn, CompnInst
 
-#from promise.eater.interfaces import toWalkerGetHost, toWalkerGetOwner
+# from promise.eater.interfaces import toWalkerGetHost, toWalkerGetOwner
 
 COMPN_PACK_EXTENSIONS = set(['zip', 'tar.gz'])
 COMPN_TEXT_EXTENSIONS = set(['yml', 'py', 'sh', 'txt'])
@@ -42,7 +42,7 @@ class CompnAPI(Resource):
             compn_name=compn_name, description=description, owner=owner, yml_fname=yml_fname,
            # eater_reload_cmd=eater_reload_cmd, eater_version=eater_version, eater_port=eater_port,
            # eater_runtime_id=eater_runtime_id, eater_mid_type=eater_mid_type,eater_owner_id=eater_owner_id
-            default_params=default_params )
+            default_params=default_params)
         [state, msg] = compn.save()
         if not state:
             app.logger.error(utils.logmsg('create new compn faild.'))
@@ -92,7 +92,7 @@ class CompnAPI(Resource):
 
         args = self.reqparse.parse_args()
 
-      #要使用butler的接口获取user_id对应的数据，不能用原来的模型，但是现在本地也没有数据，所以先注释
+        # 要使用butler的接口获取user_id对应的数据，不能用原来的模型，但是现在本地也没有数据，所以先注释
         # try:
         #     #owner = User.get_users(user_id=g.current_user_id)[0]
         #     #现在通过msclient来获取current_user_id
@@ -420,7 +420,7 @@ class CompnInstAPI(Resource):
             'compninst_id', type=str, location='args', help='compninst_id must be a string.')
         args = self.reqparse.parse_args()
 
-       #要调用butler的接口获取current_user_id,现在先注释掉
+        # 要调用butler的接口获取current_user_id,现在先注释掉
         # try:
         #     #current_user = User.get_users(user_id=g.current_user_id)[0]
         #
@@ -435,7 +435,7 @@ class CompnInstAPI(Resource):
         #     raise exception.ClientUnauthError('wrong user_id in token.')
 
        #假数据
-        current_user={'user_id':123,'deleted':0,'valid':1}
+        current_user = {'user_id': 123, 'deleted': 0, 'valid': 1}
 
         class Struct:
             def __init__(self, **entries):
@@ -450,7 +450,7 @@ class CompnInstAPI(Resource):
             print res
             return res
 
-        current_user=Struct(user_id=123,deleted=0,valid=1)
+        current_user = Struct(user_id=123, deleted=0, valid=1)
 
         compninst_id = args['compninst_id']
         if compninst_id is not None:

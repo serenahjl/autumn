@@ -1,5 +1,6 @@
+# -*- coding:utf-8 -*-
 
-#添加api的resouece
+# 添加api的resource
 
 
 from .interface import CompnAPI, CompnInstAPI

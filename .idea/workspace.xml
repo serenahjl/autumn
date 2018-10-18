@@ -69,13 +69,13 @@
         <counts>
           <entry key="Jenkinsfile" value="35" />
           <entry key="gitignore" value="2" />
-          <entry key="ini" value="27" />
+          <entry key="ini" value="36" />
           <entry key="py" value="1459" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Ini" value="27" />
+          <entry key="Ini" value="36" />
           <entry key="PLAIN_TEXT" value="37" />
           <entry key="Python" value="1459" />
         </counts>
@@ -160,8 +160,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nosetests.ini">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+            <state relative-caret-position="140">
+              <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -696,8 +696,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/nosetests.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        <state relative-caret-position="140">
+          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
         </state>
       </provider>
     </entry>

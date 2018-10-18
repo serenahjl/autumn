@@ -434,7 +434,7 @@ class CompnInstAPI(Resource):
         #     app.logger.debug(utils.logmsg('wrong user_id in token.'))
         #     raise exception.ClientUnauthError('wrong user_id in token.')
 
-       #假数据
+        # 假数据
         current_user = {'user_id': 123, 'deleted': 0, 'valid': 1}
 
         class Struct:

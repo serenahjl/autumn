@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-# !/usr/bin/env.conf python
+# !/usr/bin/env python
 #
 # Author: daisheng
 # Email: shawntai.ds@gmail.com
@@ -60,7 +60,10 @@ from flask.ext.cors import CORS
 cors = CORS(app, allow_headers='*', expose_headers='Content-Disposition')
 
 from flask.ext.cachecontrol import (
-    FlaskCacheControl)
+    FlaskCacheControl,
+    cache,
+    cache_for,
+    dont_cache)
 flask_cache_control = FlaskCacheControl()
 flask_cache_control.init_app(app)
 
@@ -68,4 +71,9 @@ flask_cache_control.init_app(app)
 @app.route('/')
 def hello_world():
     return 'Hello World!'
+
+import user
+import auth
+import todo
+
 
